@@ -86,7 +86,35 @@ print(red[0])'''
 
 
 
+def getGforImage():
+    global greenCounter
+    global pixelCount2
+    pixelCount2 = 1
+    imGreen = Image.new("RGB", (495, 557))
+    for x in range(495):
+        for y in range(557):
+            pix = pictures[greenCounter].getpixel((x,y))
+            imGreen.putpixel((x,y),pix[1])
+            print ("\nImage number " + str(greenCounter + 1) + " Progress: " + str(pixelCount2) + " of " + str(275715) + "pixels...")
+            pixelCount2 = pixelCount2 + 1
+    green[greenCounter] = imGreen
+    greenCounter = greenCounter + 1
 
+def getBforImage():
+    global blueCounter
+    global pixelCount3
+    pixelCount3 = 1
+    imBlue = Image.new("RGB", (495, 557))
+    for x in range(495):
+        for y in range(557):
+            pix = pictures[blueCounter].getpixel((x,y))
+            imBlue.putpixel((x,y),pix[2])
+            print ("\nImage number " + str(blueCounter + 1) + " Progress: " + str(pixelCount3) + " of " + str(275715) + "pixels...")
+            pixelCount3 = pixelCount3 + 1
+    blue[blueCounter] = imBlue
+    blueCounter = blueCounter + 1
+#for loop: #goal: call the function
+#for x in range (9):
 
 
 #pix1 = rgb_im1.getpixel((0,0))
