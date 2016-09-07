@@ -39,5 +39,5 @@ def getImagesPixelMedian():
 #call the function to perform its task
 getImagesPixelMedian()
 
-#newIm.save()
+newIm.save("Result.PNG")
 newIm.show()
