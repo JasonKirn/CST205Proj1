@@ -10,8 +10,18 @@ im6 = Image.open("6.PNG")
 im7 = Image.open("7.PNG")
 im8 = Image.open("8.PNG")
 im9 = Image.open("9.PNG")
+rgb_im1 = im1.convert('RGB')#This is not needed for this project, however
+rgb_im2 = im2.convert('RGB')#if you download images online you may need this
+rgb_im3 = im3.convert('RGB')#to convert RGBA format to RGB so that this program's
+rgb_im4 = im4.convert('RGB')#use of getpixel always works with any pictures.
+rgb_im5 = im5.convert('RGB')
+rgb_im6 = im6.convert('RGB')
+rgb_im7 = im7.convert('RGB')
+rgb_im8 = im8.convert('RGB')
+rgb_im9 = im9.convert('RGB')
 
-pictures = [im1, im2, im3, im4, im5, im6, im7, im8, im9]#Store them into an array
+pictures = [rgb_im1, rgb_im2, rgb_im3, rgb_im4, rgb_im5,
+ rgb_im6, rgb_im7, rgb_im8, rgb_im9]#Store them into an array
 
 newIm = Image.new("RGB", (495, 557))#create a new blank image to put the result into
 
