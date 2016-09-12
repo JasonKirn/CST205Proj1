@@ -1,5 +1,6 @@
 #CST205
 #Jason Kirn
+#https://github.com/JasonKirn/CST205Proj1/blob/master/finalProject1.py
 from PIL import Image
 im1 = Image.open("1.PNG")#Start by opening all the given images
 im2 = Image.open("2.PNG")
@@ -23,15 +24,17 @@ rgb_im9 = im9.convert('RGB')
 pictures = [rgb_im1, rgb_im2, rgb_im3, rgb_im4, rgb_im5,
  rgb_im6, rgb_im7, rgb_im8, rgb_im9]#Store them into an array
 
-newIm = Image.new("RGB", (495, 557))#create a new blank image to put the result into
+width, height = im1.size#grab size of the images, must be similar sizes.
+
+newIm = Image.new("RGB", (width, height))#create a new blank image to put the result into
 
 red = [1, 2, 3, 4, 5, 6, 7, 8, 9]#Arrays to hold the r, g, b pixels
 green = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 blue = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 def getImagesPixelMedian():
-    for x in range(495):
-        for y in range(557):
+    for x in range(width):
+        for y in range(height):
             counter = 0
             while (counter < 9):
                 #Get r, g, b pixels from image 1-9, starting at 0 because of indexing
